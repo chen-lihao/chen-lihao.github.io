@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JavaScript学习之路 (四) 引用类型</title>
+      <link href="/2022/03/18/JavaScript%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-%E5%9B%9B-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2022/03/18/JavaScript%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-%E5%9B%9B-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h1>Object 类型</h1><p>大多数引用类型都是 <code>Object</code> 类型的实例</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建 Object 实例的方式</span></span><br><span class="line"><span class="comment">// 1. 使用 new 操作符</span></span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="title class_">Object</span>()</span><br><span class="line">person.<span class="property">name</span> = <span class="string">&#x27;Nicholas&#x27;</span></span><br><span class="line">pserson.<span class="property">age</span> = <span class="number">29</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     &quot;name&quot;: &quot;Nicholas&quot;,</span></span><br><span class="line"><span class="comment">//     &quot;age&quot;: 29</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// 2. 对象字面量表示法</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">29</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     &quot;name&quot;: &quot;zs&quot;,</span></span><br><span class="line"><span class="comment">//     &quot;age&quot;: 29</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义只包含默认属性和方法的对象</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;&#125;</span><br><span class="line">person.<span class="property">name</span> = <span class="string">&#x27;Nicholas&#x27;</span></span><br><span class="line">pserson.<span class="property">age</span> = <span class="number">29</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     &quot;name&quot;: &quot;zs&quot;,</span></span><br><span class="line"><span class="comment">//     &quot;age&quot;: 29</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure><h1>Array 类型</h1><p><code>Array</code>类型是JavaScript中最常用的类型。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript学习之路(三)变量、作用域和内存</title>
       <link href="/2022/03/18/JavaScript%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF(%E4%B8%89)%E5%8F%98%E9%87%8F%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%86%85%E5%AD%98/"/>
       <url>/2022/03/18/JavaScript%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF(%E4%B8%89)%E5%8F%98%E9%87%8F%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%86%85%E5%AD%98/</url>
