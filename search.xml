@@ -4,7 +4,36 @@
   
     
     <entry>
-      <title>每日编程-20220602</title>
+      <title>每日编程(20220607)</title>
+      <link href="/2022/06/07/%E6%AF%8F%E6%97%A5%E7%BC%96%E7%A8%8B-20220607/"/>
+      <url>/2022/06/07/%E6%AF%8F%E6%97%A5%E7%BC%96%E7%A8%8B-20220607/</url>
+      
+        <content type="html"><![CDATA[<h1>最长公共前缀II</h1><p><strong>题目：</strong> 已知某二叉树的先序序列和中序序列，编程计算并输出该二叉树的后序序列。</p><p><strong>输入格式：</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字符串数组</span><br></pre></td></tr></table></figure><p><strong>输出格式：</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前缀字符串</span><br></pre></td></tr></table></figure><p><strong>输入样例：</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br></pre></td></tr></table></figure><p><strong>输出样例：</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;fl&quot;</span><br></pre></td></tr></table></figure><p><strong>思路：</strong><br>用一个变量来保存最长的前缀，将第一个数组字符串作为基串，逐个匹配后面元素的字符串。</p><p><strong>代码：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function">string <span class="title">longestCommonPrefix</span><span class="params">(vector&lt;string&gt; &amp;strs)</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(strs.<span class="built_in">empty</span>() || strs.<span class="built_in">size</span>() == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">            vector&lt;string&gt;::iterator t;</span><br><span class="line">            string prefix;</span><br><span class="line">            <span class="type">char</span> stemp;</span><br><span class="line">            <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(<span class="number">1</span>) &#123;</span><br><span class="line">                stemp = strs[<span class="number">0</span>][i];</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; strs.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(stemp != strs[j][i])</span><br><span class="line">                        <span class="keyword">return</span> prefix;</span><br><span class="line">                &#125;</span><br><span class="line">                prefix += stemp;</span><br><span class="line">                i++; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> prefix;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">    vector&lt;string&gt; strs;</span><br><span class="line"><span class="comment">//    strs.push_back(&quot;flower&quot;);</span></span><br><span class="line"><span class="comment">//    strs.push_back(&quot;flow&quot;);</span></span><br><span class="line"><span class="comment">//    strs.push_back(&quot;flight&quot;);</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//    strs.push_back(&quot;dog&quot;);</span></span><br><span class="line"><span class="comment">//    strs.push_back(&quot;racecar&quot;);</span></span><br><span class="line"><span class="comment">//    strs.push_back(&quot;car&quot;);</span></span><br><span class="line"></span><br><span class="line">    strs.<span class="built_in">push_back</span>(<span class="string">&quot;dog&quot;</span>);</span><br><span class="line">    strs.<span class="built_in">push_back</span>(<span class="string">&quot;dogracecar&quot;</span>);</span><br><span class="line">    strs.<span class="built_in">push_back</span>(<span class="string">&quot;docar&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    Solution s;</span><br><span class="line">    cout &lt;&lt; s.<span class="built_in">longestCommonPrefix</span>(strs);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程题 </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>每日编程(20220602)</title>
       <link href="/2022/06/02/%E6%AF%8F%E6%97%A5%E7%BC%96%E7%A8%8B-20220602/"/>
       <url>/2022/06/02/%E6%AF%8F%E6%97%A5%E7%BC%96%E7%A8%8B-20220602/</url>
       
