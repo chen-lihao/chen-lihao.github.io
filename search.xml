@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>webpack相关知识</title>
+      <link href="/2023/06/28/webpack%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+      <url>/2023/06/28/webpack%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本篇博客是为了加深对于<code>webpack</code>的理解</p></blockquote><h1>webpack的作用是什么？</h1><p>前端网页功能丰富、现如今<code>SPA（Single Page Web Application 单页面应用）</code>技术大量应用， <code>JavaScript</code> 的复杂的增加，以及 <code>Scss</code> 、 <code>Less</code> 和 <code>Typescript</code> 的编译工作都需要 <code>webpack</code> 来解决处理。</p><h1>webpack的工作原理</h1><p><code>webpack</code> 是一个模块打包工具，它主要做以下工作：</p><ul><li>分析项目的结构、找到需要的 <code>JavaScript</code> 模块</li><li>将非 <code>JavaScript</code> 的文件（ <code>Scss</code> 、 <code>Less</code> 和 <code>Typescript</code> 等）转换为合适的格式，让浏览器执行</li></ul><h1>webpack的打包原理</h1><p>webpack 将一切都视为模块，无论是 <code>JavaScript</code> 、 <code>Css</code> 、 <code>HTML</code> 和 <code>Image</code> 图片资源等等都可以相互引用，通过 <code>entry.js</code> 对所有依赖的文件进行追踪，将各个模块通过 <code>loader</code> 和 <code>plugins</code> 处理进行打包。</p><h1>webpack的核心概念</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SSL/TSL及openssl的使用</title>
       <link href="/2023/06/24/openssl%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
       <url>/2023/06/24/openssl%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
